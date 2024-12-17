@@ -16,11 +16,12 @@ class UserResponse(UserBase):
     class Config:
         from_attributes = True
 
+# Login Schema
 class UserLogin(BaseModel):
     email: EmailStr
     password: str
 
-# Schema for Successful Login Response
+# Login Response Schema
 class LoginResponse(BaseModel):
     message: str
     user: UserResponse
